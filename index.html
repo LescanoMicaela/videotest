@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- Make the app title different than the page title. -->
+	<meta name="apple-mobile-web-app-title" content="videos">
+	<meta name="mobile-web-app-title" content="videos">
+
+	<!-- Configure the status bar. -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="mobile-web-app-status-bar-style" content="black">
+	<title> Title </title>
+	<link href="styles/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div class="mainContainer">
+		<div class="icons">
+			<div>
+				<img id="move" src="images/movedeac2.png" alt="move">
+				<img id="show-btn" onClick="showText()" src="images/show.png" alt="show">
+			</div>
+			<div>
+				<img id="play-btn" onClick="autoLoopVideo()" src="images/play.png" alt="play">
+				<img id="pause-btn" onClick="pauseVideo()" src="images/pause.png" alt="pause">
+				<img id="fullscreen" onClick="fullscreen()" src="images/fullscreen.png" alt="fullscreen">
+			</div>
+			<div class="dropdown">
+				<button onClick="showSpeed()" class="dropbtn" id="dropbtn">Velocidad</button>
+				<div class="dropdown-content">
+					<a onClick="modifyPlaybackRate()" href="#">0.25</a>
+					<a onClick="modifyPlaybackRate()" href="#">0.5</a>
+					<a onClick="modifyPlaybackRate()" href="#">0.75</a>
+					<a onClick="modifyPlaybackRate()" href="#">1</a>
+					<a onClick="modifyPlaybackRate()" href="#">1.5</a>
+					<a onClick="modifyPlaybackRate()" href="#">1.75</a>
+					<a onClick="modifyPlaybackRate()" href="#">2</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="container">
+
+		</div>
+
+		<div id="keys" class="keys">
+			<div onClick="addCharacters(' ')" class="spaceBar">
+				<h3>space</h3>
+			</div>
+			<div onClick="addCharacters('.')" class="punto">
+				<h3>.</h3>
+			</div>
+			<div onClick="addCharacters(', ')" class="punto">
+				<h3>,</h3>
+			</div>
+			<div onClick="addCharacters(space)" class="punto">
+				<img src="images/enter.png">
+			</div>
+		</div>
+		<div id="hiddenText">
+			<div class="iconContainer">
+				<div id="wordsIcon">
+					<img id="dwn-btn" src="images/download2.png" alt="dowload">
+					<img id="delete-btn" onClick="deleteWord()" src="images/delete.png" alt="delete">
+				</div>
+				<img id="exit" onClick="hideText()" src="images/exit.png" alt="exit">
+			</div>
+			<p id="palabra"></p>
+		</div>
+	</div>
+	<script src="scripts/main.js"></script>
+	<!--	<script src="scripts/serviceworker.js"></script>-->
+</body>
+</html>
